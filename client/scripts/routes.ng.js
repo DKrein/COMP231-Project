@@ -1,7 +1,7 @@
 angular
   .module('COMP231-Project')
   .config(config);
- 
+
 function config($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state('tab', {
@@ -17,7 +17,16 @@ function config($stateProvider, $urlRouterProvider) {
           controller: 'ChatsCtrl'
         }
       }
+    })
+    .state('tab.chat-detail', {
+      url: '/chats/:chatId',
+      views: {
+        'tab-chats': {
+          templateUrl: 'client/templates/chat-detail.ng.html',
+          controller: 'ChatDetailCtrl'
+        }
+      }
     });
- 
+
   $urlRouterProvider.otherwise('tab/chats');
 }
