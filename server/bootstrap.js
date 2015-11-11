@@ -32,23 +32,23 @@ Meteor.startup(function () {
     var chats = [
       {
         name: 'Christine',
-        picture: 'https://randomuser.me/api/portraits/thumb/women/1.jpg'
+        //picture: 'https://randomuser.me/api/portraits/thumb/women/1.jpg'
       },
       {
         name: 'Eunmi',
-        picture: 'https://randomuser.me/api/portraits/thumb/women/2.jpg'
+        //picture: 'https://randomuser.me/api/portraits/thumb/women/2.jpg'
       },
       {
         name: 'Yarik',
-        picture: 'https://randomuser.me/api/portraits/thumb/men/1.jpg'
+        picture: 'https://i.imgur.com/upvbaPC.jpg'
       },
       {
         name: 'Yusi',
-        picture: 'https://randomuser.me/api/portraits/thumb/women/4.jpg'
+       // picture: 'https://randomuser.me/api/portraits/thumb/women/4.jpg'
       },
       {
         name: 'Kent',
-        picture: 'https://randomuser.me/api/portraits/thumb/men/2.jpg'
+       // picture: 'https://randomuser.me/api/portraits/thumb/men/2.jpg'
       }
     ];
  

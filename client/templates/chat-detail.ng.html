@@ -18,6 +18,9 @@
     <label class="item-input-wrapper">
       <input
               ng-model="data.message"
+              on-return ="sendMessage(); closeKeyboard()"
+              on-focus="scrollUp()"
+              on-blur="scrollDown()"
               dir="auto"
               type="text"/>
     </label>
