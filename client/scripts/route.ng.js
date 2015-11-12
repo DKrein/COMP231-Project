@@ -39,3 +39,4 @@ function config($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('tab/chats');
 }
+
