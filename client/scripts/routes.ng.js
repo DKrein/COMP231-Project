@@ -26,7 +26,17 @@ function config($stateProvider, $urlRouterProvider) {
           controller: 'ChatDetailCtrl'
         }
       }
+    })
+    .state('tab.settings', {
+      url: '/settings',
+      views: {
+        'tab-settings': {
+          templateUrl: 'client/templates/settings.ng.html',
+          controller: 'SettingsCtrl'
+        }
+      }
     });
 
   $urlRouterProvider.otherwise('tab/chats');
 }
+
