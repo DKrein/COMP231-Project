@@ -1,7 +1,7 @@
 Meteor.startup(function () {
  	if (Chats.find().count() === 0) {
     Messages.remove({});
- 
+ //
     var messages = [
       {
         text: 'Yes, I don\'t like github', 
@@ -22,7 +22,11 @@ Meteor.startup(function () {
       {
         text: 'Hey what\'s up',
         timestamp: moment().subtract(2, 'weeks').toDate()
-      }
+      },
+    {
+        text: 'Hey, just 20 minutes of Trove',
+        timestamp: moment().subtract(2, 'weeks').toDate()
+    }
     ];
  
     messages.forEach(m => {
@@ -32,11 +36,11 @@ Meteor.startup(function () {
     var chats = [
       {
         name: 'Christine',
-        //picture: 'https://randomuser.me/api/portraits/thumb/women/1.jpg'
+        picture: 'http://i.imgur.com/0IJUt0T.jpg'
       },
       {
         name: 'Eunmi',
-        //picture: 'https://randomuser.me/api/portraits/thumb/women/2.jpg'
+        picture: 'http://i.imgur.com/kPdrbTf.jpg'
       },
       {
         name: 'Yarik',
@@ -44,12 +48,16 @@ Meteor.startup(function () {
       },
       {
         name: 'Yusi',
-       // picture: 'https://randomuser.me/api/portraits/thumb/women/4.jpg'
+        picture: 'http://i.imgur.com/tliNtcA.jpg'
       },
       {
         name: 'Kent',
-       // picture: 'https://randomuser.me/api/portraits/thumb/men/2.jpg'
-      }
+        picture: 'http://i.imgur.com/lyRMbhN.jpg'
+      },
+    {
+        name: 'Douglas',
+        picture: 'http://i.imgur.com/FL9NqJG.jpg'
+    }
     ];
  
     chats.forEach(chat => {
