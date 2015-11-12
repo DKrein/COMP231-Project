@@ -1,7 +1,7 @@
 Meteor.startup(function () {
  	if (Chats.find().count() === 0) {
     Messages.remove({});
- 
+ //
     var messages = [
       {
         text: 'Yes, I don\'t like github', 
@@ -22,7 +22,11 @@ Meteor.startup(function () {
       {
         text: 'Hey what\'s up',
         timestamp: moment().subtract(2, 'weeks').toDate()
-      }
+      },
+    {
+        text: 'Hey, just 20 minutes of Trove',
+        timestamp: moment().subtract(2, 'weeks').toDate()
+    }
     ];
  
     messages.forEach(m => {
@@ -49,7 +53,11 @@ Meteor.startup(function () {
       {
         name: 'Kent',
         picture: 'Kent.jpg'
-      }
+      },
+      {
+        name: 'Douglas',
+        picture: 'Douglas.png'
+    }
     ];
  
     chats.forEach(chat => {

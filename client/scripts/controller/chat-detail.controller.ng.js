@@ -3,8 +3,10 @@ angular
   .controller('ChatDetailCtrl', ChatDetailCtrl);
 
 function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout, $meteor) {
+
   var chatId = $stateParams.chatId;
   var checkPlatform = ionic.Platform.isWebView() && ionic.Platform.checkPlatform();
+
   $scope.chat = $scope.$meteorObject(Chats, chatId, false);
 
   $scope.messages = $scope.$meteorCollection(function () {
