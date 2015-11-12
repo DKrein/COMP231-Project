@@ -2,9 +2,9 @@ angular
   .module('COMP231-Project')
   .controller('ChatDetailCtrl', ChatDetailCtrl);
 
-function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout) {
-    var chatId = $stateParams.chatId;
-    var checkPlatform = ionic.Platform.isWebView() && ionic.Platform.checkPlatform();
+function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout, $meteor) {
+  var chatId = $stateParams.chatId;
+  var checkPlatform = ionic.Platform.isWebView() && ionic.Platform.checkPlatform();
   $scope.chat = $scope.$meteorObject(Chats, chatId, false);
 
   $scope.messages = $scope.$meteorCollection(function () {
@@ -17,30 +17,27 @@ function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout) {
 
   $scope.data = {};
   $scope.sendMessage = sendMessage;
-  $scope.scrollUp = scrollUp;
-  $scope.scrollDown = scrollDown;
+  $scope.keyboardUp = keyboardUp;
+  $scope.keyboardDown = keyboardDown;
   $scope.closeKeyboard = closeKeyboard;
 
   $scope.data = {};
   $scope.sendMessage = sendMessage;
  
-  ///
- 
   function sendMessage () {
-      // TODO: Implement this logic
       if (_.isEmpty($scope.data.message)) {
           return;
       }
 
       $meteor.call('newMessage', {
-                 text: $scope.data.message,
-                 chatId: chatId
-               });
+        text: $scope.data.message,
+        chatId: chatId
+      });
     
-         delete $scope.data.message;
+      delete $scope.data.message;
   }
 
-  function scrollUp() {
+  function keyboardUp() {
       if (checkPlatform) {
           $scope.data.keyboardHeight = 216;
       }
@@ -50,7 +47,7 @@ function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout) {
       }, 300);
   }
 
-  function scrollDown() {
+  function keyboardDown() {
       if (checkPlatform) {
           $scope.data.keyboardHeight = 0;
       }

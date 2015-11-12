@@ -19,8 +19,8 @@
       <input
               ng-model="data.message"
               on-return ="sendMessage(); closeKeyboard()"
-              on-focus="scrollUp()"
-              on-blur="scrollDown()"
+              on-focus="keyboardUp()"
+              on-blur="keyboardDown()"
               dir="auto"
               type="text"/>
     </label>
