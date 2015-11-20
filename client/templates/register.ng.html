@@ -1,0 +1,22 @@
+<ion-view title="Register">
+  <ion-content padding="true" class="register">
+  <div style="top:50px; position:absolute;left: 0px;right: 0px;padding: 10px;background-color: rgba(0, 0, 0, 0.6);">
+     
+      <label class="item item-input">
+          <span class="input-label">Name</span>
+          <input type="text" ng-model="data.name">
+      </label>
+      
+      <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="text" ng-model="data.email">
+      </label>
+      <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="data.password">
+      </label>
+
+     <button class="button button-block button-balanced" ng-click="register()">Create</button>
+    </div>
+ </ion-content>
+</ion-view>

@@ -7,7 +7,15 @@ function config($stateProvider, $urlRouterProvider) {
     .state('tab', {
       url: '/tab',
       abstract: true,
-      templateUrl: 'client/templates/tabs.ng.html'
+      templateUrl: 'client/templates/tabs.ng.html',
+      resolve: {
+        user: ['$meteor', function ($meteor) {
+          return $meteor.requireUser();
+        }],
+        chats: ['$meteor', function ($meteor) {
+          return $meteor.subscribe('chats');
+        }]
+      }
     })
     .state('tab.chats', {
       url: '/chats',
@@ -27,6 +35,26 @@ function config($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('login', {
+      url: '/login',
+      templateUrl: 'client/templates/login.ng.html',
+      controller: 'LoginCtrl'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'client/templates/register.ng.html',
+      controller: 'RegisterCtrl'
+    })
+    .state('profile', {
+      url: '/profile',
+      templateUrl: 'client/templates/profile.ng.html',
+      controller: 'ProfileCtrl',
+      resolve: {
+        user: ['$meteor', function ($meteor) {
+          return $meteor.requireUser();
+        }]
+      }
+    })
     .state('tab.settings', {
       url: '/settings',
       views: {
@@ -39,4 +67,3 @@ function config($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise('tab/chats');
 }
-

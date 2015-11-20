@@ -1,0 +1,20 @@
+<ion-view title="Login">
+  <ion-content padding="true" class="login">
+    <div class="text-center instructions">
+    Please, enter you e-mail and password to login in the messager.
+    </div>
+    <!--<form name="testForm">-->
+    <div class="list" style="top:50px; position:absolute;left: 0px;right: 0px;padding: 10px;background-color: rgba(0, 0, 0, 0.6);" >
+      <label class="item item-input">
+        <input on-return="login()" type="email" placeholder="Email address" ng-model="data.email">
+      </label>
+      <label class="item item-input">
+        <input on-return="login()" type="password" placeholder="Password" ng-model="data.password">
+      </label>
+      <button ng-click="login()" class="button button-block button-balanced" >Login</button>
+      <button ng-click="register()" class="button button-block button-balanced" >Register</button>
+    </div>
+    <!--</form>-->
+
+  </ion-content>
+</ion-view>
