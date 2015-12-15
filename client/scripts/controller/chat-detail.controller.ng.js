@@ -2,7 +2,7 @@ angular
   .module('COMP231-Project')
   .controller('ChatDetailCtrl', ChatDetailCtrl);
 
-function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout, $meteor) {
+function ChatDetailCtrl ($scope, $stateParams, $ionicScrollDelegate, $timeout, $meteor, $ionicModal) {
 
   var chatId = $stateParams.chatId;
   var checkPlatform = ionic.Platform.isWebView() && ionic.Platform.checkPlatform();

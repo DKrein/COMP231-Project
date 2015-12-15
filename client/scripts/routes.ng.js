@@ -63,6 +63,17 @@ function config($stateProvider, $urlRouterProvider) {
           controller: 'SettingsCtrl'
         }
       }
+
+    })
+    .state('tab.contacts', {
+        url: '/contacts',
+        views: {
+            'tab-contacts': {
+                templateUrl: 'client/templates/contacts.ng.html',
+                controller: 'ContactsCtrl'
+            }
+        }
+
     });
 
   $urlRouterProvider.otherwise('tab/chats');

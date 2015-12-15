@@ -2,6 +2,13 @@
   <ion-nav-buttons side="right">
     <button ng-click="updateName()" ng-disabled="!data.name || data.name.length === 0" class="button button-clear button-positive">Done</button>
   </ion-nav-buttons>
+
+  <ion-header-bar>
+    <h1 class="title">New Chat</h1>
+    <div class="buttons">
+      <button class="button button-clear button-positive" ng-click="hideModal()">Cancel</button>
+    </div>
+  </ion-header-bar>
  
   <ion-content class="profile">
     <a class="profile-picture positive" ng-click="updatePicture()">
