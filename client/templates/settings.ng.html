@@ -4,12 +4,15 @@
       <div class="list card">
         <ion-item class="profile-item">
           <div class="profile-picture big-profile-picture">
-            <img src="https://randomuser.me/api/portraits/thumb/men/2.jpg">
+            <img ng-src="{{ data.picture }}" alt="profile picture">
           </div>
-          <h2 class="profile-name dark">JOHN DOE</h2>
-          <div class="profile-info">I am happy to be here</div>
+          <h2 class="profile-name dark" ng-model="data.name">{{data.name}}</h2>
+          <div class="profile-info" ng-model="data.personal">{{data.personal}}</div>
         </ion-item>
         <ion-item class="profile-item">
+          <button ng-click="openProfile()" class="button button-block button-stable">
+            Profile
+          </button>
           <button ng-click="logout()" class="button button-block button-assertive">
             Logout
           </button>

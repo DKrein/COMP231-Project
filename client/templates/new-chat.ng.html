@@ -11,7 +11,7 @@
       <a ng-repeat="user in users" ng-click="newChat(user._id)" class="item">
         <h2>{{user.profile.name}}</h2>
         <p>
-          Hello... :)
+          {{user.profile.personal}}
         </p>
       </a>
     </div>

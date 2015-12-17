@@ -5,9 +5,11 @@ angular
 function ProfileCtrl ($scope, $state, $meteor, $ionicPopup, $log, $ionicLoading) {
   var user = Meteor.user();
   var name = user && user.profile ? user.profile.name : '';
+  var personal = user && user.profile ? user.profile.personal : 'Be-In App';
  
   $scope.data = {
-    name: name
+    name: name,
+    personal: personal
   };
  
   $scope.updateName = updateName;
@@ -48,7 +50,20 @@ function ProfileCtrl ($scope, $state, $meteor, $ionicPopup, $log, $ionicLoading)
       })
       .catch(handleError);
   }
+  
+  function updatePersonal () {
+    if (_.isEmpty($scope.data.personal)) {
+      return;
+    }
  
+    $meteor.call('updatePersonal', $scope.data.personal)
+      .then(function () {
+        $state.go('tab.chats');
+      })
+      .catch(handleError);
+  }
+
+
   function handleError (err) {
     $log.error('profile save error ', err);
  

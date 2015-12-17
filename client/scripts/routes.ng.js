@@ -26,6 +26,15 @@ function config($stateProvider, $urlRouterProvider) {
         }
       }
     })
+    .state('tab.calendar', {
+      url: '/calendar',
+      views: {
+        'tab-calendar': {
+          templateUrl: 'client/templates/calendar.ng.html',
+          controller: 'CalendarCtrl'
+        }
+      }
+    })
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {

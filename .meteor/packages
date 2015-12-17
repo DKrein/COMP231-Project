@@ -26,3 +26,6 @@ accounts-base
 accounts-password
 okland:camera-ui
 reywood:publish-composite
+planettraining:jquery-fullcalendar
+angularui:ui-calendar
+mrt:fullcalendar

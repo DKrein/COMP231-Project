@@ -18,7 +18,8 @@ function RegisterCtrl($scope, $state, $ionicLoading, $ionicPopup, $log) {
       email: $scope.data.email,
       password: $scope.data.password,
       profile: {
-        name: $scope.data.name
+        name: $scope.data.name,
+        personal: "Be-In App"
       }
     }, function(error){
       if(error){

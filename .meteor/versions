@@ -5,6 +5,7 @@ angular:angular@1.4.7
 angular:angular-animate@1.4.7
 angular:angular-sanitize@1.4.7
 angularui:angular-ui-router@0.2.15
+angularui:ui-calendar@1.0.1
 autoupdate@1.2.3
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -58,11 +59,14 @@ mobile-status-bar@1.0.6
 momentjs:moment@2.10.6
 mongo@1.1.2
 mongo-id@1.0.1
+mrt:fullcalendar@1.6.1
+mrt:jquery-ui@1.9.2
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
 observe-sequence@1.0.7
 okland:camera-ui@0.0.2
 ordered-dict@1.0.4
+planettraining:jquery-fullcalendar@2.5.0
 promise@0.5.0
 random@1.0.4
 rate-limit@1.0.0

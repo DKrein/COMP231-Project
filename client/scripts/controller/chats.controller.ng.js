@@ -21,6 +21,7 @@ function ChatsCtrl ($scope, $ionicModal) {
   ////////////
 
   function openNewChatModal () {
+    console.log("show modal");
     $scope.modal.show();
   }
 
